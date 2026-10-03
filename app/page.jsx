@@ -77,108 +77,110 @@ export default function HomePage() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(businessSchema) }} 
       />
 
-      {/* 1. Hero Section */}
-      <section className="hero" aria-labelledby="hero-title">
-        <picture className="hero__image">
-          <img 
-            src="https://images.unsplash.com/photo-1590381105924-c72589b9ef3f?auto=format&fit=crop&w=1536&q=80" 
-            width="1536" 
-            height="1024" 
-            alt="Luxury architectural paving and interlocking stones" 
-            fetchPriority="high" 
-          />
-        </picture>
-        <div className="hero__wash" />
-        
-        <div className="container hero__inner">
-          <div className="hero__copy">
-            <p className="eyebrow eyebrow--light hero__service-area">
-              <span>Paving &amp; Hardscape Contractor</span>
-              <small>Commercial · Residential · Municipal</small>
-            </p>
-            
-            <h1 id="hero-title">
-              Precision paving<br />
-              across Florida,<br />
-              <em>built to last.</em>
-            </h1>
-            
-            <p className="hero__lede">
-              Commercial asphalt, architectural interlocking pavers, and concrete flatwork engineered with laser-guided grading and generational durability.
-            </p>
-            
-            <div className="hero__actions">
-              <a className="button button--accent" href="#quote">
-                Get my free quote <span>→</span>
-              </a>
-              <a className="text-link text-link--light" href={contact.phoneHref}>
-                <span className="icon-circle">☎</span>
-                <span>
-                  <small>Prefer to talk?</small>
-                  {contact.phone}
-                </span>
-              </a>
-            </div>
-
-            <ul className="hero__proof">
-              <li className="hero__proof-google">
-                <a href={social.googleReviews} target="_blank" rel="noopener noreferrer" aria-label="See Paveworks Solutions five-star reviews on Google">
-                  <GoogleMark />
-                  <span>5★<small>Google reviews</small></span>
+      {/* 1. Hero & Trust Strip (100% viewport coverage on initial screen) */}
+      <div className="hero-fold-wrapper">
+        <section className="hero" aria-labelledby="hero-title">
+          <picture className="hero__image">
+            <img 
+              src="https://images.unsplash.com/photo-1590381105924-c72589b9ef3f?auto=format&fit=crop&w=1536&q=80" 
+              width="1536" 
+              height="1024" 
+              alt="Luxury architectural paving and interlocking stones" 
+              fetchPriority="high" 
+            />
+          </picture>
+          <div className="hero__wash" />
+          
+          <div className="container hero__inner">
+            <div className="hero__copy">
+              <p className="eyebrow eyebrow--light hero__service-area">
+                <span>Paving &amp; Hardscape Contractor</span>
+                <small>Commercial · Residential · Municipal</small>
+              </p>
+              
+              <h1 id="hero-title">
+                Precision paving<br />
+                across Florida,<br />
+                <em>built to last.</em>
+              </h1>
+              
+              <p className="hero__lede">
+                Commercial asphalt, architectural interlocking pavers, and concrete flatwork engineered with laser-guided grading and generational durability.
+              </p>
+              
+              <div className="hero__actions">
+                <a className="button button--accent" href="#quote">
+                  Get my free quote <span>→</span>
                 </a>
-              </li>
-              <li>
-                <span>15+</span> years of excellence
-              </li>
-              <li>
-                <span>1,400+</span> completed projects
-              </li>
-              <li>
-                <span>100%</span> warranty backed
-              </li>
-            </ul>
-          </div>
-        </div>
+                <a className="text-link text-link--light" href={contact.phoneHref}>
+                  <span className="icon-circle">☎</span>
+                  <span>
+                    <small>Prefer to talk?</small>
+                    {contact.phone}
+                  </span>
+                </a>
+              </div>
 
-        <div className="hero__note" aria-hidden="true">
-          <span className="sparkle-icon">✦</span>
-          <span>
-            Heavy-Duty Subgrade Base.<br />
-            <strong>Flawless Surface Precision.</strong>
-          </span>
-        </div>
-      </section>
+              <ul className="hero__proof">
+                <li className="hero__proof-google">
+                  <a href={social.googleReviews} target="_blank" rel="noopener noreferrer" aria-label="See Paveworks Solutions five-star reviews on Google">
+                    <GoogleMark />
+                    <span>5★<small>Google reviews</small></span>
+                  </a>
+                </li>
+                <li>
+                  <span>15+</span> years of excellence
+                </li>
+                <li>
+                  <span>1,400+</span> completed projects
+                </li>
+                <li>
+                  <span>100%</span> warranty backed
+                </li>
+              </ul>
+            </div>
+          </div>
 
-      {/* 2. Trust Strip */}
-      <section className="trust-strip" aria-label="Our promise">
-        <div className="container trust-strip__inner">
-          <p className="script-note">Enduring craftsmanship, grounded in structural integrity.</p>
-          
-          <div className="trust-item trust-item--featured">
-            <span className="trust-symbol">↻</span>
+          <div className="hero__note" aria-hidden="true">
+            <span className="sparkle-icon">✦</span>
             <span>
-              <strong>Turnkey Surface Solutions</strong>
-              Excavation, grading, pavers, asphalt &amp; sealcoating.
+              Heavy-Duty Subgrade Base.<br />
+              <strong>Flawless Surface Precision.</strong>
             </span>
           </div>
-          
-          <div className="trust-item">
-            <span className="trust-symbol">✓</span>
-            <span>
-              <strong>Laser-Guided Precision</strong>
-              Zero water pooling and engineered drainage.
-            </span>
+        </section>
+
+        {/* 2. Trust Strip */}
+        <section className="trust-strip" aria-label="Our promise">
+          <div className="container trust-strip__inner">
+            <p className="script-note">Enduring craftsmanship, grounded in structural integrity.</p>
+            
+            <div className="trust-item trust-item--featured">
+              <span className="trust-symbol">↻</span>
+              <span>
+                <strong>Turnkey Surface Solutions</strong>
+                Excavation, grading, pavers, asphalt &amp; sealcoating.
+              </span>
+            </div>
+            
+            <div className="trust-item">
+              <span className="trust-symbol">✓</span>
+              <span>
+                <strong>Laser-Guided Precision</strong>
+                Zero water pooling and engineered drainage.
+              </span>
+            </div>
+            
+            <div className="trust-item">
+              <span className="trust-symbol">◇</span>
+              <span>
+                <strong>Architectural Grade Craft</strong>
+                Commercial hot-mix asphalt &amp; high-PSI pavers.
+              </span>
+            </div>
           </div>
-          
-          <div className="trust-item">
-            <span className="trust-symbol">◇</span>
-            <span>
-              <strong>Architectural Grade Craft</strong>
-              Commercial hot-mix asphalt &amp; high-PSI pavers.
-            </span>
-          </div>
-        </div>
-      </section>
+        </section>
+      </div>
 
       {/* 3. Services Grid */}
       <section className="section services" id="services" aria-labelledby="services-title">
