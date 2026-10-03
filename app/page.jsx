@@ -77,9 +77,8 @@ export default function HomePage() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(businessSchema) }} 
       />
 
-      {/* 1. Hero & Trust Strip (100% viewport coverage on initial screen) */}
-      <div className="hero-fold-wrapper">
-        <section className="hero" aria-labelledby="hero-title">
+      {/* 1. Hero Section */}
+      <section className="hero" aria-labelledby="hero-title">
           <picture className="hero__image">
             <img 
               src="https://images.unsplash.com/photo-1590381105924-c72589b9ef3f?auto=format&fit=crop&w=1536&q=80" 
@@ -180,7 +179,6 @@ export default function HomePage() {
             </div>
           </div>
         </section>
-      </div>
 
       {/* 3. Services Grid */}
       <section className="section services" id="services" aria-labelledby="services-title">
